@@ -1,0 +1,17 @@
+public boolean contains <T data>{
+
+    //check if data is null
+    if(data == null)
+    return false;
+
+    //navigate to the first arrayList component
+    ArrayListElement<T> firstNode = getFirst();
+
+    // return false if first arrayList component is null
+    if(firstNode == null)
+    return false;
+
+
+
+
+}

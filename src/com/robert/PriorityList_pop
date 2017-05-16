@@ -1,0 +1,14 @@
+public T pop {
+
+        //check if it is empty
+        if(getHead() == null)
+        return null;
+
+        //peek the smallest item then delete it
+
+        T temp = getHead().getKey();
+
+        setHead(getHead().getNext());
+
+        return temp;
+        }

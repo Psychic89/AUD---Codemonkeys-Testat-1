@@ -1,0 +1,10 @@
+public T peek{
+
+//check if there is any existing node
+    if (getHead() == null)
+    return null;
+
+//show the smallest element by peeking
+
+    return getHead().getKey();
+}

@@ -1,0 +1,38 @@
+public boolean T push{
+
+//check if it is a valid key
+  if(key == null){
+  return false;
+  }
+
+  //create a new node
+  MListElement <T> node = new MListElement<T>(key);
+
+  //insert node at start 
+  if(getHead() == null || (getComp().compare(key, getHead().getKey()) < 0)){
+    node.setNext(getHead());
+    setHead(node);return true;
+    }
+
+  //insert node in the middle
+  MListElement<T> iterator = getHead();
+
+  while(iterator.getNext() != null){
+    if(getComp().compare(key, (iterator.getNext().getKey()) ) < 0){
+      node.setNext(iterator.getNext());
+      iterator.setNext(node);
+      return true;
+        
+    }
+    else {
+        iterator = iterator.getNext();
+        
+    }
+  
+  }
+
+  //insert node at the end
+  iterator.setNext(node);
+  return true;
+
+  }
